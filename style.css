@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+html body {
+  background-color: #f1f8ff;
+}
+
+#header {
+  background-image: url(/Documents/Images/hero-man.jpg);
+  background-size: 100% 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+.navbar-scrolled {
+  background-color: #355592;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar li {
+  position: relative;
+  padding: 6px 10px;
+}
+
+.navbar li a {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar li a:hover {
+  color: orangered;
+}
+
+.navbar li a:active {
+  color: orange;
+}
+
+.navbar .btn {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-container {
+  margin: 100px;
+}
+
+.container .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.container .hero-section h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.container .hero-section p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container .custom-btn {
+  background-color: #325491;
+  border: none;
+  font-weight: 700;
+}
+
+.container .custom-btn:hover {
+  background-color: orange;
+  border: none;
+  font-weight: 700;
+}
+
+.container .custom-btn2 {
+  background-color: transparent;
+  font-weight: 700;
+  margin-left: 40px;
+  border: 1px solid #fff;
+}
+
+.container .custom-btn2:hover {
+  background-color: orangered;
+  font-weight: 700;
+}
+
+.container .row .card {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  border: none;
+}
+
+.border-radius-reset {
+  border-radius: 0 !important;
+}
+
+.container .row .card h5 {
+  font-size: 25px;
+  color: #325491;
+  font-weight: 1000;
+}
+
+.container .row .card p {
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+.box {
+  margin-top: 2rem;
+}
+
+.container .text-div h2 {
+  color: #325491;
+  font-weight: 1000;
+}
+
+.custom-hr {
+  height: 8px;
+  border: none;
+  background-color: darkorange;
+  width: 8%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.container .buttons button.btn-warning {
+  background-color: orange;
+  color: #fff;
+}
+
+.container .buttons button.btn-warning:not(:active) {
+  background-color: #325491;
+  color: #fff;
+}
+
+.container .buttons button.btn-warning:hover {
+  background-color: orange;
+  box-shadow: 0 0 4px 2px orange;
+}
+
+.container .buttons button.btn-warning:active,
+.container .buttons button.btn-warning:focus {
+  background-color: orange;
+  box-shadow: 0 0 4px 2px orange;
+}
+
+.container .buttons button.btn-primary:hover {
+  box-shadow: 0 0 4px 2px orange;
+}
+
+.container .buttons button.btn-primary:active,
+.container .buttons button.btn-primary:focus {
+  background-color: orange;
+  box-shadow: 0 0 4px 2px orange;
+}
+
+section .container .card .trainer {
+  position: relative;
+}
+
+section .container .trainer::after {
+  position: absolute;
+  content: "";
+  width: 315px;
+  height: 365px;
+  top: -5%;
+  left: -5%;
+  background-color: #315494;
+  clip-path: polygon(
+    0 30%,
+    30% 30%,
+    30% 0,
+    70% 0,
+    70% 29%,
+    100% 30%,
+    100% 70%,
+    70% 71%,
+    70% 100%,
+    30% 100%,
+    30% 70%,
+    0 70%
+  );
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  width: 270px;
+  height: 90px;
+  top: 80%;
+  left: 50%;
+  clip-path: polygon(
+    0% 15%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    85% 15%,
+    100% 15%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    15% 85%,
+    0% 85%
+  );
+  transform: translate(-50%, -50%);
+  background-color: #315494;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay span {
+  font-size: 23px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+section .custom-div-text .text-div {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background-color: #315494;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+section .custom-div-text .text-div::after {
+  position: absolute;
+  clip-path: polygon(100% 100%, 0 0, 100% 0);
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: 100%;
+  left: 0;
+  background-color: #8197bf;
+  z-index: 2;
+}
+
+section .custom-div-text .text-div::before {
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: 100%;
+  left: 88%;
+  background-color: #8197bf;
+  z-index: 2;
+}
+
+.client-div-text-2 {
+  margin-bottom: 25px;
+}
+
+.container .features h3 {
+  color: #4e4e4e;
+  font-weight: 900;
+}
+
+.container .features h2 {
+  font-size: 3rem;
+  color: #315494;
+  font-weight: 1000;
+}
+
+.container .features p {
+  color: #4e4e4e;
+}
+
+.container .row .img-yoga {
+  width: 480px;
+  height: 400;
+}
+
+.bi-caret-up-fill {
+  color: orange;
+}
+
+.container .card-body a {
+  transition: font-size 0.3s ease;
+}
+
+.container .card-body a:hover {
+  font-size: 110%;
+}
+
+.container .feature p {
+  color: #4e4e4e;
+}
+
+section .container .row .bmi-triangle {
+  position: relative;
+}
+
+section .container .row .bmi-triangle::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 100%;
+  left: var(--bmi-triangle-left, 15%);
+  background-color: orangered;
+}
+
+section .container .card-item {
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section .container .client img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.footer-container {
+  background-color: #315494;
+}
+
+.footer-container h5 {
+  color: #fff;
+}
+
+.footer-container footer p {
+  color: #fff;
+}
+
+footer .list-unstyled a {
+  color: white !important;
+}
+
+.list-unstyled a:hover {
+  color: orangered !important;
+}
+
+/* 576px RESPONSIVE CSS */
+
+@media screen and (max-width: 576px) {
+  .navbar-toggler-icon {
+    filter: invert(100%);
+    width: 40px !important;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main h1 {
+    font-size: 70px !important;
+  }
+
+  .main h1 br {
+    display: none;
+  }
+
+  .btn-div {
+    display: inline-block;
+  }
+
+  .btn-div .custom-btn {
+    width: 35%;
+    height: 80%;
+    font-size: 30px;
+    padding: -50px;
+  }
+
+  .btn-div button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .main p {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+
+  .btns-div .custom-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .btns-div .custom-btn2 {
+    display: block;
+    margin-left: -1px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .buttons-all {
+    margin-left: 48px;
+  }
+
+  section .cards {
+    display: block !important;
+  }
+
+  section .cards .card {
+    margin-bottom: 15px !important;
+    width: 250px !important;
+    height: 100px !important;
+  }
+
+  .client-review-class {
+    margin-left: 80px;
+  }
+
+  .first-review {
+    margin-bottom: 100px !important;
+  }
+
+  .client-div-text-2 {
+    margin-bottom: 15px;
+  }
+
+  .header-3 {
+    margin-left: -30px;
+    font-size: 30px;
+  }
+
+  section .container .features .paragraph-div {
+    margin-left: -30px;
+    text-align: left;
+    max-width: 576px;
+    width: 100%;
+  }
+
+  section .container .features .paragraph-div-2 {
+    margin-left: -30px;
+    overflow-wrap: break-word !important;
+  }
+
+  section .container .features .img-yoga {
+    width: 350px;
+    margin-left: -20px;
+  }
+
+  section .container .features .div-1 h2 {
+    text-align: left;
+    margin-left: 30px;
+    font-size: 60px;
+  }
+
+  section .container .features .div-1 .d-flex {
+    display: block !important;
+    margin-left: 10px;
+  }
+
+  section .container .features .div-1 .d-flex input {
+    width: 300px;
+    height: 40px;
+  }
+
+  section .container .features h6 {
+    margin-left: -10px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: #4e4e4e;
+  }
+
+  section .container .features iframe {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -45px;
+  }
+
+  section .container .features .appointment {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+
+  section .container .features input::placeholder {
+    text-align: left;
+  }
+
+  section .container .features p {
+    margin-left: 30px;
+  }
+
+  section .best-trainers {
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 25%;
+  }
+
+  section .best-trainers .card {
+    margin-bottom: 50px;
+  }
+
+  section .container .features .input-group {
+    text-align: center;
+    width: 85%;
+  }
+
+  section .container .features .form-control {
+    text-align: center;
+    width: 85%;
+  }
+
+  .purchase {
+    flex-direction: column;
+  }
+
+  .purchase .card-item {
+    width: 400px !important;
+    margin-left: 80px;
+  }
+
+  .review {
+    flex-direction: column;
+  }
+
+  .custom-div-text {
+    flex-direction: column;
+  }
+
+  .custom-div-text .text-div {
+    width: 500px;
+  }
+
+  .container .features img {
+    width: 500% !important;
+  }
+
+  section .container .row h2 {
+    text-align: center;
+  }
+
+  section .container .row p {
+    justify-content: center;
+  }
+
+  .footer-container footer p {
+    margin-left: 10px;
+  }
+
+  .footer-container footer .row {
+    margin-left: 20px;
+  }
+}
