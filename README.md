@@ -44,4 +44,4 @@ This project is a landing page developed for a sports center named "Powerful" us
    
 ## Body Mass Index Calculation
 
-You can enter your personal information and calculate your body mass index using the BMI calculator tool on the homepage of the site.
+You can enter your personal information and calculate your body mass index using the BMI calculator tool on the homepage of the site. 
