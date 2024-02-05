@@ -372,6 +372,24 @@ footer .list-unstyled a {
 /* 576px RESPONSIVE CSS */
 
 @media screen and (max-width: 576px) {
+  .navbar-toggler {
+    position: fixed;
+    top: 20px;
+    right: 10px; 
+    z-index: 1000; 
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    padding-top: 60px !important;
+    margin-right: -20px !important;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
   .navbar-toggler-icon {
     filter: invert(100%);
     width: 40px !important;
